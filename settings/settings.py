@@ -7,6 +7,9 @@ ADMINS = (
     ('Your Name', 'your_email@example.com'),
 )
 
+import os
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.abspath(__file__),'../..'))
+
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -60,7 +63,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.abspath(os.path.join(PROJECT_ROOT,'static/'))
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
